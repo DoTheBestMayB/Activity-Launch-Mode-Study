@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NewLauncherActivity">
+    tools:context=".OtherAffinityActivity">
 
     <TextView
         android:id="@+id/tv_activity_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:text="NewLauncherActivity"
+        android:text="OtherAffinityActivity"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,8 +58,8 @@
     <Button
         android:id="@+id/btn_standard"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="Standard Activity"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_main" />
@@ -90,6 +90,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_single_task" />
+
 
     <Button
         android:id="@+id/btn_other_affinity"

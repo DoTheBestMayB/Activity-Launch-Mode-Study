@@ -1,9 +1,9 @@
 package com.dothebestmayb.launchmodestudy
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import com.dothebestmayb.launchmodestudy.databinding.ActivityStandardBinding
 
 class StandardActivity : AppCompatActivity() {
@@ -43,6 +43,7 @@ class StandardActivity : AppCompatActivity() {
             btnSingleTop to SingleTopActivity::class.java,
             btnSingleTask to SingleTaskActivity::class.java,
             btnSingleTaskWithOtherAffinity to SingleTaskWithOtherAffinityActivity::class.java,
+            btnOtherAffinity to OtherAffinityActivity::class.java,
             btnSingleInstance to SingleInstanceActivity::class.java,
             btnLauncher to NewLauncherActivity::class.java,
         ).forEach { (btn, cls) ->

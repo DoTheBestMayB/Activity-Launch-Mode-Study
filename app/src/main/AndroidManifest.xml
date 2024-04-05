@@ -13,6 +13,10 @@
         android:theme="@style/Theme.LaunchModeStudy"
         tools:targetApi="31">
         <activity
+            android:name=".OtherAffinityActivity"
+            android:exported="false"
+            android:taskAffinity="com.dothebestmayb.other" />
+        <activity
             android:name=".StandardActivity"
             android:exported="false" />
         <activity
