@@ -7,14 +7,43 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tv_activity_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textSize="24sp"
         android:layout_marginTop="48dp"
-        android:text="MainActivity" />
+        android:text="MainActivity"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switch_new_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="FLAG_ACTIVITY_NEW_TASK"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_activity_name" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switch_single_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FLAG_ACTIVITY_SINGLE_TOP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/switch_new_task" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switch_clear_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FLAG_ACTIVITY_CLEAR_TOP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/switch_single_top" />
 
     <Button
         android:id="@+id/btn_main"
@@ -27,13 +56,22 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/btn_standard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Standard Activity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_main" />
+
+    <Button
         android:id="@+id/btn_single_top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Single Top Activity"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_main" />
+        app:layout_constraintTop_toBottomOf="@id/btn_standard" />
 
     <Button
         android:id="@+id/btn_single_task"

@@ -25,6 +25,7 @@ class SingleTopActivity : AppCompatActivity() {
     private fun setListener() = with(binding) {
         listOf(
             btnMain to MainActivity::class.java,
+            btnStandard to StandardActivity::class.java,
             btnSingleTop to SingleTopActivity::class.java,
             btnSingleTask to SingleTaskActivity::class.java,
             btnSingleTaskWithOtherAffinity to SingleTaskWithOtherAffinityActivity::class.java,

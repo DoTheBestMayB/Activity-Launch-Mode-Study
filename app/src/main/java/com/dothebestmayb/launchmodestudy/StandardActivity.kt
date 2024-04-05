@@ -4,22 +4,20 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.dothebestmayb.launchmodestudy.databinding.ActivityMainBinding
+import com.dothebestmayb.launchmodestudy.databinding.ActivityStandardBinding
 
-class MainActivity : AppCompatActivity() {
-
-    private lateinit var binding: ActivityMainBinding
-    private val TAG = MainActivity::class.java.simpleName
+class StandardActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityStandardBinding
+    private val TAG = StandardActivity::class.java.simpleName
     private val order = count++
     private lateinit var taskAffinity: String
     private val flags = hashSetOf<Int>()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         taskAffinity = getTaskAffinity(this) ?: ""
         Log.i(TAG, "[task#$taskId][affinity#${taskAffinity}]onCreate - $order")
 
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityStandardBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setListener()
@@ -49,7 +47,7 @@ class MainActivity : AppCompatActivity() {
             btnLauncher to NewLauncherActivity::class.java,
         ).forEach { (btn, cls) ->
             btn.setOnClickListener {
-                val intent = Intent(this@MainActivity, cls).apply {
+                val intent = Intent(this@StandardActivity, cls).apply {
                     flags = createFlags()
                 }
                 startActivity(intent)
