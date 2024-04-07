@@ -50,6 +50,7 @@ class StandardActivity : AppCompatActivity() {
             btn.setOnClickListener {
                 val intent = Intent(this@StandardActivity, cls).apply {
                     flags = createFlags()
+                    putExtra("Test", 1)
                 }
                 startActivity(intent)
             }
@@ -82,6 +83,12 @@ class StandardActivity : AppCompatActivity() {
         Log.i(TAG, "[task#$taskId][affinity#${taskAffinity}]onResume - $order")
     }
 
+    override fun onNewIntent(intent: Intent?) {
+        super.onNewIntent(intent)
+
+        Log.i(TAG, "[task#$taskId][affinity#${taskAffinity}]onNewIntent - $order")
+    }
+
     override fun onPause() {
         super.onPause()
 
@@ -99,7 +106,6 @@ class StandardActivity : AppCompatActivity() {
 
         Log.i(TAG, "[task#$taskId][affinity#${taskAffinity}]onDestroy - $order")
     }
-
     companion object {
         private var count = 0
     }

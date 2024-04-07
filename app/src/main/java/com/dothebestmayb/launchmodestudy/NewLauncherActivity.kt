@@ -43,37 +43,43 @@ class NewLauncherActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
 
-        Log.i(TAG, "[task#$taskId][affinity#$taskAffinity]onStart - $order")
+        Log.i(TAG, "[task#$taskId][affinity#${taskAffinity}]onStart - $order")
     }
 
     override fun onRestart() {
         super.onRestart()
 
-        Log.i(TAG, "[task#$taskId][affinity##${taskAffinity}]onRestart - $order")
+        Log.i(TAG, "[task#$taskId][affinity#${taskAffinity}]onRestart - $order")
     }
 
     override fun onResume() {
         super.onResume()
 
-        Log.i(TAG, "[task#$taskId][affinity#$taskAffinity]onResume - $order")
+        Log.i(TAG, "[task#$taskId][affinity#${taskAffinity}]onResume - $order")
+    }
+
+    override fun onNewIntent(intent: Intent?) {
+        super.onNewIntent(intent)
+
+        Log.i(TAG, "[task#$taskId][affinity#${taskAffinity}]onNewIntent - $order")
     }
 
     override fun onPause() {
         super.onPause()
 
-        Log.i(TAG, "[task#$taskId][affinity#$taskAffinity]onPause - $order")
+        Log.i(TAG, "[task#$taskId][affinity#${taskAffinity}]onPause - $order")
     }
 
     override fun onStop() {
         super.onStop()
 
-        Log.i(TAG, "[task#$taskId][affinity#$taskAffinity]onStop - $order")
+        Log.i(TAG, "[task#$taskId][affinity#${taskAffinity}]onStop - $order")
     }
 
     override fun onDestroy() {
         super.onDestroy()
 
-        Log.i(TAG, "[task#$taskId][affinity#$taskAffinity]onDestroy - $order")
+        Log.i(TAG, "[task#$taskId][affinity#${taskAffinity}]onDestroy - $order")
     }
 
     companion object {

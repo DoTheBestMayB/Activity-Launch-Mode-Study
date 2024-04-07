@@ -58,6 +58,12 @@ class SingleTaskWithOtherAffinityActivity : AppCompatActivity() {
         Log.i(TAG, "[task#$taskId][affinity#${taskAffinity}]onResume - $order")
     }
 
+    override fun onNewIntent(intent: Intent?) {
+        super.onNewIntent(intent)
+
+        Log.i(TAG, "[task#$taskId][affinity#${taskAffinity}]onNewIntent - $order")
+    }
+
     override fun onPause() {
         super.onPause()
 
@@ -74,12 +80,6 @@ class SingleTaskWithOtherAffinityActivity : AppCompatActivity() {
         super.onDestroy()
 
         Log.i(TAG, "[task#$taskId][affinity#${taskAffinity}]onDestroy - $order")
-    }
-
-    override fun onNewIntent(intent: Intent?) {
-        super.onNewIntent(intent)
-
-        Log.i(TAG, "[task#$taskId][affinity#${taskAffinity}]onNewIntent - $order")
     }
 
     companion object {

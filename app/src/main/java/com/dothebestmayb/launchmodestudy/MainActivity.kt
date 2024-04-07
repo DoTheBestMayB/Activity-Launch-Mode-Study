@@ -84,6 +84,12 @@ class MainActivity : AppCompatActivity() {
         Log.i(TAG, "[task#$taskId][affinity#${taskAffinity}]onResume - $order")
     }
 
+    override fun onNewIntent(intent: Intent?) {
+        super.onNewIntent(intent)
+
+        Log.i(TAG, "[task#$taskId][affinity#${taskAffinity}]onNewIntent - $order")
+    }
+
     override fun onPause() {
         super.onPause()
 
